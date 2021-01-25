@@ -12,11 +12,9 @@ inputRef.addEventListener('blur', doValidateInputRef);
 
 function doValidateInputRef(event) {
   const lengthInput = event.target.value;
-  inputRef.classList.remove('invalid');
   if (Number(lengthInput.length) === Number(inputDataRef.dataset.length)) {
-    inputRef.classList.add('valid');
     inputRef.classList.replace('invalid', 'valid');
   } else {
-    inputRef.classList.replace('valid', 'invalid');
+    inputRef.classList.add('invalid');
   }
 }
